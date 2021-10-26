@@ -13,11 +13,13 @@ function Home() {
         backgroundImg="model-s.jpg"
       />
       <Section
+
         title="Model Y"
         description="Buy Now"
         leftButton="Custom order"
         rightButton="Current Inventory"
         backgroundImg="model-y.jpg"
+
       />
       <Section
         title="Model X"

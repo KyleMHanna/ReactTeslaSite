@@ -4,7 +4,7 @@ import styled from "styled-components"
 
 function Section({ title, description, leftButton, rightButton, backgroundImg }) {
   return (
-    <Wrap bgImage={backgroundImg}>
+    <Wrap bgImg={backgroundImg}>
       <ItemText>
         <h1> {title} </h1>
         <p>{description}</p>
@@ -28,17 +28,18 @@ export default Section
 
 
 const Wrap = styled.div`
+
 width: 100vw;
 height: 100vh;
 background: gray;
-background-size: cover;
-background-position: center;
-background-repeat: no-repeat;
-display-flex: 0 0 auto;
+background-size: fill;
+background-position: center center;
+
+
 flex-direction: column;
 justify-content: space-between;
 align-items: center;
-background-image: ${props => `url("/public/images/${props.bgImage}")`};
+background-image: url("https://electrek.co/wp-content/uploads/sites/3/2021/06/New-Tesla-Model-S-hero.jpg?quality=82&strip=all");
 `
 
 const ItemText = styled.div`
@@ -75,3 +76,11 @@ height: 40px;
 const Buttons = styled.div`
 
   `
+interface Props {
+  o?: {
+    background: string,
+    width: string,
+    height: string,
+    color: string
+  }
+}
