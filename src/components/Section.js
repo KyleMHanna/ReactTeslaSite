@@ -7,6 +7,7 @@ function Section({ title, description, leftButton, rightButton, backgroundImg })
     <Wrap
       // @ts-ignore
       bgImg={backgroundImg}>
+
       <Fade bottom>
         <ItemText>
           <h1> {title} </h1>
@@ -48,13 +49,16 @@ background-image: ${props => `url("/images/${props
 `
 
 const ItemText = styled.div`
-padding: top: 15vh;
+padding-top: 15vh;
 text-align: center;
 `
 
 const ButtonGroup = styled.div`
 display: flex;
-margin-bottom: 30px
+margin-bottom: 30px;
+@media (max-width:768px){
+  flex-direction: column;
+}
   `
 const LeftButton = styled.div`
 background-color: rgba(23, 36, 32, 0.8);

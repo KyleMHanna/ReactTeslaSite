@@ -1,14 +1,15 @@
+// eslint-disable-next-line jsx-a11y/anchor-is-valid
 /* eslint-disable jsx-a11y/anchor-is-valid */
 import React from 'react'
 import styled from 'styled-components'
-import MenuIcon from '@mui/icons-material/Menu'
+import MenuIcon from '@material-ui/icons/Menu'
 
 
 function Header() {
   return (
     <Container>
       <a>
-
+        <img src="/images/logo.svg" alt="" />
       </a>
       <Menu>
         <a href="#">Model S</a>
@@ -22,12 +23,12 @@ function Header() {
         <CustomMenu />
       </RightMenu>
       <BurgerNav>
-        <li><a href="">Existing Inventory</a></li>
-        <li><a href="">Used Inventory</a></li>
-        <li><a href="">Existing Inventory</a></li>
-        <li><a href="">Existing Inventory</a></li>
-        <li><a href="">Existing Inventory</a></li>
-        <li><a href="">Existing Inventory</a></li>
+        <li><a href="#">Existing Inventory</a></li>
+        <li><a href="#">Used Inventory</a></li>
+        <li><a href="#">Existing Inventory</a></li>
+        <li><a href="#">Existing Inventory</a></li>
+        <li><a href="#">Existing Inventory</a></li>
+        <li><a href="#">Existing Inventory</a></li>
       </BurgerNav>
 
     </Container>
@@ -41,16 +42,18 @@ min-height:60px;
 position:fixed;
 display:flex;
 align-items: center;
+justify-content: space-between;
 padding:0 20px;
 top:0;
 left:0;
 right:0;
+flex:1;
 z-index:1;
 `
 const Menu = styled.div`
 display: flex;
 align-items: center;
-
+justify-content: space-between;
 a {
   font-weight: 600;
   text-transform: uppercase;
@@ -73,23 +76,21 @@ const CustomMenu = styled(MenuIcon)`
 cursor: pointer;
 `
 const BurgerNav = styled.div`
-postition: fixed;
-top:0;
-bottom:0;
-right:0;
-background-color:white;
-width:300px;
-z-index:16;
-list-style: none;
-padding:20px;
-display:flex;
-flex-direction: column;
-text-align: start;
-li {
-  padding:15px 0;
-  border-bottom: 1px solid rgba(255,)
-}
-a {
-  font-weight: 600;
-}
-`
+position: fixed;
+top: 0;
+bottom: 0;
+right: 0;
+ background: white;
+  width: 300px;
+   z-index: 100;
+    list-style: none;
+    padding: 20px;
+     display: flex;
+      flex-direction: column;
+       text-align: start;
+       transform: ${props => props.show ? 'translateX(0%)' : 'translateX(100%)'}; transition: transform 0.2s ease-in-out;
+        li
+        {   padding: 15px;   border-bottom: 1px solid rgba(0, 0, 0, .2);
+
+          a
+          {     font-weight: 600;   } } `
