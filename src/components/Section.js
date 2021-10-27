@@ -67,7 +67,9 @@ cursor: pointer;
 margin: 8px;
 `
 const RightButton = styled(LeftButton)`
-
+background-color: white;
+opacity: 0.65;
+color: black;
   `
 const DownArrow = styled.img`
 margin-top: 20px;

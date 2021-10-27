@@ -7,9 +7,9 @@ function Home() {
     <Container>
       <Section
         title="Model S"
-        description="Buy Now"
+        description="Order Online for Touchless Delivery"
         leftButton="Custom order"
-        rightButton="Current Inventory"
+        rightButton="Existing Inventory"
         backgroundImg="model-s.jpg"
       />
       <Section
@@ -24,14 +24,14 @@ function Home() {
       <Section
         title="Model X"
         description="Buy Now"
-        leftButton="Custom order"
+        leftButton="Order Online for Touchless Delivery"
         rightButton="Current Inventory"
         backgroundImg="model-x.jpg"
       />
       <Section
         title="Model 3"
         description="Buy Now"
-        leftButton="Custom order"
+        leftButton="Order Online for Touchless Delivery"
         rightButton="Current Inventory"
         backgroundImg="model-3.jpg"
       />
