@@ -4,7 +4,9 @@ import styled from "styled-components"
 
 function Section({ title, description, leftButton, rightButton, backgroundImg }) {
   return (
-    <Wrap bgImg={backgroundImg}>
+    <Wrap
+      // @ts-ignore
+      bgImg={backgroundImg}>
       <ItemText>
         <h1> {title} </h1>
         <p>{description}</p>
@@ -19,7 +21,7 @@ function Section({ title, description, leftButton, rightButton, backgroundImg })
           </RightButton>
         </ButtonGroup>
       </Buttons>
-      <DownArrow src="/images/arrow.svg" />
+      <DownArrow src="/images/down-arrow.svg" />
     </Wrap>
   )
 }
@@ -28,7 +30,6 @@ export default Section
 
 
 const Wrap = styled.div`
-
 width: 100vw;
 height: 100vh;
 background: gray;
@@ -39,7 +40,9 @@ display: flex;
 flex-direction: column;
 justify-content: space-between;
 align-items: center;
-background-image: ${props => `url("/images/${props.bgImg}")`}
+background-image: ${props => `url("/images/${props
+    // @ts-ignore
+    .bgImg}")`}
 `
 
 const ItemText = styled.div`
