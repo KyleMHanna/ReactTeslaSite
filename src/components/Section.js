@@ -19,7 +19,7 @@ function Section({ title, description, leftButton, rightButton, backgroundImg })
           </RightButton>
         </ButtonGroup>
       </Buttons>
-      <DownArrow src="./public/images/arrow.svg" />
+      <DownArrow src="/images/arrow.svg" />
     </Wrap>
   )
 }
@@ -32,14 +32,14 @@ const Wrap = styled.div`
 width: 100vw;
 height: 100vh;
 background: gray;
-background-size: fill;
+background-size: cover;
 background-position: center center;
-
+display: flex;
 
 flex-direction: column;
 justify-content: space-between;
 align-items: center;
-background-image: url("https://electrek.co/wp-content/uploads/sites/3/2021/06/New-Tesla-Model-S-hero.jpg?quality=82&strip=all");
+background-image: ${props => `url("/images/${props.bgImg}")`}
 `
 
 const ItemText = styled.div`
@@ -72,15 +72,8 @@ const RightButton = styled(LeftButton)`
 const DownArrow = styled.img`
 margin-top: 20px;
 height: 40px;
+animation: animateDown infinite 1.5s;
 `
 const Buttons = styled.div`
 
   `
-interface Props {
-  o?: {
-    background: string,
-    width: string,
-    height: string,
-    color: string
-  }
-}
