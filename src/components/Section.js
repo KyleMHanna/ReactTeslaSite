@@ -43,9 +43,7 @@ display: flex;
 flex-direction: column;
 justify-content: space-between;
 align-items: center;
-background-image: ${props => `url("/images/${props
-    // @ts-ignore
-    .bgImg}")`}
+background-image: ${ props => `url("/images/${ props.bgImg }")` }
 `
 
 const ItemText = styled.div`
